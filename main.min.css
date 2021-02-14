@@ -15,10 +15,11 @@ hr{border:solid 2px #e5e5e5;margin-bottom:1em;width:100%;z-index:0}
 .nav{width:auto;height:78px;background:rgba(248,248,246,0.95);z-index:999}
 .nav a{color:#555;text-decoration:none}
 .nav-container,main{display:block;margin:0 auto;max-width:40em;width:95%}
-.logo{position:relative;font-size:1.5rem;font-family:'HiraMinProN-W3','Noto Serif SC','宋体',serif;font-weight:300;float:left}
+@font-face{font-family:'HanWangKaiMediu26456110f43b02';src:url('//cdn.jsdelivr.net/gh/wx8/online@0.2.0/files/6029040af629d8ff54be2e85.gif?r=161694346952');src:url('//cdn.jsdelivr.net/gh/wx8/online@0.2.0/files/6029040af629d8ff54be2e85.gif?r=161694346952?#iefix') format('embedded-opentype'),url('//cdn.jsdelivr.net/gh/wx8/online@0.2.0/files/6029040af629d8ff54be2e85.png?r=161694346952') format('woff2'),url('//cdn.jsdelivr.net/gh/wx8/online@0.2.0/files/6029040af629d8ff54be2e85.bmp?r=161694346952') format('woff'),url('//cdn.jsdelivr.net/gh/wx8/online@0.2.0/files/6029040af629d8ff54be2e85.jpg?r=161694346952') format('truetype');font-weight:normal;font-style:normal}
+.logo{position:relative;font-size:1.5rem;font-family:'HanWangKaiMediu26456110f43b02','宋体',serif;font-weight:300;float:left}
 .logo[data-tooltip]:after{visibility:hidden;position:absolute;content:attr(data-tooltip);white-space:pre;top:50%;left:80%;transform:translate(-5px,-50%);padding-left:7px}
 .logo:hover:after{transition:all .1s;visibility:visible;transform:translate(5px,-50%);color:#333}
-.band{display:block;float:left;font-family:'PingFang SC','Microsoft Yahei','Source Han Sans CN',sans-serif;font-size:40px;font-weight:900;line-height:37px;width:48px;height:48px;border-radius:50%;border:3px solid;padding-left:1px;margin:15px 0}
+.band{display:block;float:left;font-family:apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;font-size:40px;font-weight:900;line-height:48px;margin:15px 0}
 .wuyu{padding-left:3px;line-height:78px}
 .desktop{float:right}
 .desktop ul{list-style-type:none;line-height:78px;padding:0;margin:0}
