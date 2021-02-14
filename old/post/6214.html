@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<link rel="canonical" href="https://2hu.net">
+<link rel="shortcut icon" href="/old/favicon.png">
+<link rel="apple-itouch-icon" href="/old/favicon.png">
+<link rel="stylesheet" href="/old/bundle/index.css">
+<link rel="stylesheet" href="https://bucket.cdn.sh.cn/font_awesome/css/all.min.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+        <meta name="keywords" content="">
+        <meta name="description" content="说一说DNS">
+        <meta name="author" content="熊的猫">
+        <title>说一说DNS - 博客哔哔·8kg.org</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+				<header class="header-wrap auto_header">
+	<div class="site-heading">
+		<div id="homelogo">
+			<a href="/">
+				<img src="/old/images/icon.svg" alt="博客哔哔" title="博客哔哔">
+			</a>
+			<h1 class="none">博客哔哔</h1>
+		</div>
+		<ul class="menu">
+			<li class="menu-item"><a href="/"><i class="fas fa-home"></i><span class="mo">主页</span></a></li>
+			<li class="menu-item"><a href="/archive"><i class="fas fa-list-ul"></i><span class="mo">目录</span></a></li>
+			<li class="menu-item"><a href="/about"><i class="fas fa-user-circle-o"></i><span class="mo">关于</span></a></li>
+			<li class="menu-item"><a href="/friend"><i class="fas fa-link"></i><span class="mo">友链</span></a></li>
+			<li class="menu-item"><a href="/feed.xml"><i class="fas fa-rss"></i><span class="mo">订阅</span></a></li>
+		</ul>
+		<div class="search-wrap">
+  <input id="search" class="search" placeholder="搜索..." data-root="">
+  <svg class="icon" width="25" height="25" viewBox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg>
+</div>
+
+	</div>
+</header>
+			</header>
+			<div class="post-title" style="background-image:url(https://bucket.cdn.sh.cn/post/6214.jpg);">
+				<div class="article-title">
+					<h1>说一说DNS</h1>
+					<hr class="small">
+					<span class="name">『 熊的猫写于</span>
+					
+						<span class="date name" data-time="1513249620"><span class="from"></span></span>
+					
+					<span class="name">』</span>
+				</div>
+			</div>
+            <article class="main article">
+                <article class="content"><p>闲来无事又不知道要写点什么，于是就把目光转投到域名的设置上了。
+首先，我把固有的DNS给品牌化了，我现在的博客DNS服务器已经变成了<code>ns8.blog.show</code>和<code>ns9.blog.show</code>，看起来是不是很高大上呢？</p>
+
+<p>以往想要实现这样的方法，要么花大价钱和技术自己架设DNS，要么就要单独购买这样的服务（CloudFlare的价格是200美元/月）。但是好在现在有了<code>Vanity Name Servers</code>技术。用Google查了一下，国外还是有几家可以免费支持虚拟的DNS服务的。</p>
+
+<blockquote>
+<p><a href="https://zonomi.com/">Zonomi</a>：免费账号最多可添加1个域名、10条解析记录，每个月1百万查询量。他家付费解析倒也不贵，10美元1年。
+<a href="https://www.digitalocean.com/community/tutorials/how-to-create-vanity-or-branded-nameservers-with-digitalocean-cloud-servers">DigitalOcean</a>：恐怕大家都知道他家的VPS和优惠力度，其实他家的DNS解析系统也非常不错。DNS系统走的是CloudFlare，免费支持Vanity Name Servers，一下子每个月就省了200美元的庞大支出。他家免费开通账号时需要信用卡或者PayPal 30美元的验证费（费用可以购买VPS）。
+<a href="https://www.vultr.com/docs/introduction-to-vultr-dns">Vultr</a>：有了DO，就不能落下其竞争对手。Vultr的DNS管理系统也支持Vanity Name Servers，免费！
+<a href="https://community.rackspace.com/products/f/public-cloud-forum/3628/custom-vanity-nameservers">RackSpace</a>：也是免费支持Vanity Name Servers，不过和DO一样，开户要绑信用卡，还不支持Paypal。所以没做过多研究。
+<a href="https://app.dnsmanager.io/">dnsmanager.io</a>：这是一个来源不详的解析系统，可以支持Vanity Name Servers。我查了一下，似乎2014年开始就有这个DNS解析系统了。大陆速度比较慢。</p>
+</blockquote>
+
+<p>其实Vanity Name Servers这东西就是面上的活儿，除了好看也没啥。要想得到更强大的DNS解析功能，还需要Google一下<code>custom dns nameservers</code>。</p>
+
+<p>因为换了DNS的服务器（目前我用的是Vultr的DNS服务），顺便也把DNSSEC和CAA记录也添加进域名中了。虽然还不知道这俩玩艺到底有什么作用，但与时俱进跟跟时髦的技术总是好的。</p>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/images/icon.svg);"></div>
+                    <a class="name" href="/about">熊的猫</a>
+                    <div class="intro">理想是做一个有文化的暴发户</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/old/post/6439.html">我不能悲伤的睡在你身边</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/old/post/6012.html">修手机记&amp;碎碎念</a>
+                    </section>
+                    
+                </section>
+                
+<a class="name" href="https://2hu.net"><div id="comment" style="text-align:center;font-size:2rem;background:#ffcfcf;">评论已关闭，欢迎移步新博客。</div></a>
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+         © 8kg.org
+    </span>
+    <span class="publish">Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a></span>
+</footer>
+        <script src="/old/bundle/index.js"></script>
+		<script src="/old/bundle/auto_header.js?version=0.0811"></script>
+    </body>
+</html>

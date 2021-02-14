@@ -1,0 +1,24 @@
+---
+title: Search Results
+permalink: "/search/"
+layout: default
+---
+
+<main class="homehead">
+  <form action="https://www.dogedoge.com" onsubmit="return dispatch()" target="_blank" style="max-width:480px;margin:300px auto">
+	<div style="border:2px solid #eee">
+	  <input type="text" maxlength="40" name="q" id="q" placeholder="输入关键词并按Enter搜索" value="">
+	</div>
+  </form>
+</main>
+<script type="text/javascript">
+function dispatch() {
+  const e = document.getElementById("q");
+  if ("" != e.value) {
+    const t = "https://www.dogedoge.com/results?q=site%3Aanwuyu.com+" + e.value,
+    o = navigator.userAgent;
+    o.includes("iPad") || o.includes("iPod") || o.includes("iPhone") ? location.href = t : window.open(t, "_blank")
+  }
+  return !1
+}
+</script>

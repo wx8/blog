@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<link rel="canonical" href="https://2hu.net">
+<link rel="shortcut icon" href="/old/favicon.png">
+<link rel="apple-itouch-icon" href="/old/favicon.png">
+<link rel="stylesheet" href="/old/bundle/index.css">
+<link rel="stylesheet" href="https://bucket.cdn.sh.cn/font_awesome/css/all.min.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+        <meta name="keywords" content="">
+        <meta name="description" content="博客搬家大作战">
+        <meta name="author" content="熊的猫">
+        <title>博客搬家大作战 - 博客哔哔·8kg.org</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+				<header class="header-wrap auto_header">
+	<div class="site-heading">
+		<div id="homelogo">
+			<a href="/">
+				<img src="/old/images/icon.svg" alt="博客哔哔" title="博客哔哔">
+			</a>
+			<h1 class="none">博客哔哔</h1>
+		</div>
+		<ul class="menu">
+			<li class="menu-item"><a href="/"><i class="fas fa-home"></i><span class="mo">主页</span></a></li>
+			<li class="menu-item"><a href="/archive"><i class="fas fa-list-ul"></i><span class="mo">目录</span></a></li>
+			<li class="menu-item"><a href="/about"><i class="fas fa-user-circle-o"></i><span class="mo">关于</span></a></li>
+			<li class="menu-item"><a href="/friend"><i class="fas fa-link"></i><span class="mo">友链</span></a></li>
+			<li class="menu-item"><a href="/feed.xml"><i class="fas fa-rss"></i><span class="mo">订阅</span></a></li>
+		</ul>
+		<div class="search-wrap">
+  <input id="search" class="search" placeholder="搜索..." data-root="">
+  <svg class="icon" width="25" height="25" viewBox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg>
+</div>
+
+	</div>
+</header>
+			</header>
+			<div class="post-title" style="background-image:url(https://bucket.cdn.sh.cn/post/10321.jpg);">
+				<div class="article-title">
+					<h1>博客搬家大作战</h1>
+					<hr class="small">
+					<span class="name">『 熊的猫写于</span>
+					
+						<span class="date name" data-time="1555138080"><span class="from"></span></span>
+					
+					<span class="name">』</span>
+				</div>
+			</div>
+            <article class="main article">
+                <article class="content"><p>上个月<code>bitcron</code>变得异常的不稳定，先后出现过两次5xx不能正常访问的情况，这很让人上火。再加上bitcron迟迟没有sitemap实时更新的功能，就有了给博客搬家的想法。</p>
+
+<p>因为bitcron采用的是md文档来渲染，最平稳的过渡应该是导入到静态博客中去。但是在使用bitcron之前，我用的就是静态博客，每次重新渲染生成一遍博客，其实还是挺麻烦的。所以又把目光重新对焦到动态博客框架。</p>
+
+<p>根据技术支持的完整程度，我最终选出了3套程序作为备选，分别是：Wordpress、Typecho和Ghost。</p>
+
+<p>WP不用说了，是迄今为止最成熟、最有影响力的CMS之一了，但是不支持Markdown；Ghost无论是前端还是后台的样式，都是我最爱的，但是Node.js的虚拟主机在市面上几乎没有，又不想折腾VPS。因此，最后还是采用了Typecho。</p>
+
+<p>至于原来依托在bitcron上的文章，只能一篇一篇纯手动解决了。此处可以省略好多字……</p>
+
+<p>有了程序，就要有虚拟主机跟着搭配才好。花了不下200元，试了一圈大大小小的空间服务商，最后总算是找到一家个人相对比较满意的<a href="https://i.zhujike.com/flag/1595">服务商</a>，整个构架都是基于全球的云处理技术。顺带还把博客的图床迁移到了<a href="https://portal.qiniu.com/signup?code=3lbtgobfe5xe9">七牛云</a>，数据库也直接上云，搬到了景安那边（就他家的数据库便宜）。</p>
+
+<p>既然使用了自己的空间，可定制的东西就更多了，所以特意把博客的域名提交到了HSTS preload，不知道何年何月可以正式加入到HSTS preload的大家庭中。</p>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/images/icon.svg);"></div>
+                    <a class="name" href="/about">熊的猫</a>
+                    <div class="intro">理想是做一个有文化的暴发户</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/old/post/10444.html">in苏州</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/old/post/10319.html">说点什么呢</a>
+                    </section>
+                    
+                </section>
+                
+<a class="name" href="https://2hu.net"><div id="comment" style="text-align:center;font-size:2rem;background:#ffcfcf;">评论已关闭，欢迎移步新博客。</div></a>
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+         © 8kg.org
+    </span>
+    <span class="publish">Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a></span>
+</footer>
+        <script src="/old/bundle/index.js"></script>
+		<script src="/old/bundle/auto_header.js?version=0.0811"></script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/wx8/online@0.1.0/second.min.css">
+<main class="homehead">
+	<div class="post">
+		<h1 class="post-title">{{ page.title }}</h1>
+		<hr>
+		<div class="post-info"></div>
+		{{ content }}
+	</div>
+	<div class="pagination">
+		{% if page.next.url %}
+		<a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+		{% endif %}
+		{% if page.previous.url %}
+		<a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+		{% endif %}
+	</div>
+</main>

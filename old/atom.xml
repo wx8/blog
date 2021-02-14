@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+  <title>博客哔哔</title>
+  <id>https://2hu.net</id>
+  <updated>2019-10-19T21:27:22+08:00</updated>
+  <subtitle>思想有多远，我们就能扯多远……</subtitle>
+  <link href="https://2hu.net"></link>
+  <author>
+    <name>博客哔哔</name>
+  </author>
+  <entry>
+    <title>我所过之足迹，皆为倾世之风景</title>
+    <updated>2019-10-04T10:12:00+08:00</updated>
+    <id>tag:8kg.org,2019-10-04:/post/11988.html</id>
+    <content type="html">&lt;p&gt;在电视上看过了新中国70周年的阅兵大典，民族自豪感油然而生。正应了那句话，此生无悔入华夏，来生还在种花家。博客彻底更换了一个域名，如你所见的“wo.style”。Style这个词大家都很熟悉了，格调、方式、作风、样式……，Wo则是汉语拼音“我”的意思。所以全称为“我的格调”或者“我的风格”之意，很符合个人博客的特立独行。目前域名已经启用了DNSSEC增加安全性，当然，国内还不骗不支持这一解析技术，先给海外侨胞们体验便利吧……&lt;/p&gt;&#xA;</content>
+    <link href="https://2hu.net/post/11988.html"></link>
+    <author>
+      <name>熊的猫</name>
+    </author>
+  </entry>
+  <entry>
+    <title>基于Chromium的Edge浏览器放出Beta版了</title>
+    <updated>2019-09-07T14:17:00+08:00</updated>
+    <id>tag:8kg.org,2019-09-07:/post/11872.html</id>
+    <content type="html">&lt;p&gt;Edge基于Chromium重启开发早就不是一件新鲜的事情了，在去年12月6日的时候微软就已经正式宣告了这件事情，并且不断有开发版安装包流出。基于Chromium相对而言还是好处多于坏处的，首要的就是Edge得以跨平台化，先前的Edge浏览器是Windows 10“独占”，而换到Chromium之后就可以让之前版本的Windows用上最新的微软自家浏览器，甚至可以跨平台到macOS上面去，未来还可以有Linux的版本，符合微软目前的全平台软件战略……&lt;/p&gt;&#xA;</content>
+    <link href="https://2hu.net/post/11872.html"></link>
+    <author>
+      <name>熊的猫</name>
+    </author>
+  </entry>
+  <entry>
+    <title>孤独的人会寂寞吗</title>
+    <updated>2019-09-03T20:58:00+08:00</updated>
+    <id>tag:8kg.org,2019-09-03:/post/11808.html</id>
+    <content type="html">&lt;p&gt;“孤独”是自得其乐的独处，是自成体系的完整。就像一个小女孩在嘈杂的房间的一角静静地折纸、画画、凝视着鱼缸中的小鱼，心无杂念，旁若无人，那是一种将散轶于外部事物之中的眼光引回内心世界的专心致志，那是一份心境和平的自给自足、清明安和而无所外求的精神圆融。而“寂寞”是无可慰藉的空虚，是急于冲破的樊笼。深陷其中的人往往不知道做什么好……&lt;/p&gt;&#xA;</content>
+    <link href="https://2hu.net/post/11808.html"></link>
+    <author>
+      <name>熊的猫</name>
+    </author>
+  </entry>
+  <entry>
+    <title>in淮北</title>
+    <updated>2019-08-27T19:37:00+08:00</updated>
+    <id>tag:8kg.org,2019-08-27:/post/11173.html</id>
+    <content type="html">&lt;p&gt;提起淮北，最能想到的便是那句“橘生淮南则为橘，橘生淮北则为枳”。地处四省交汇的淮北，口子窖是对我这样的外地人而言最有名的特产。到了淮北之后才知道，除了酒，口子窖还有当地最有高等级的酒店。在酒店的大堂流火的八月，因为出差，在淮北逗留了2天。有幸去了一趟传说中的网红店——古集。在那里尝了撒汤、炒碗和地锅鸡。胡椒的辛辣让我这个不吃辣的人汗流浃背……&lt;/p&gt;&#xA;</content>
+    <link href="https://2hu.net/post/11173.html"></link>
+    <author>
+      <name>熊的猫</name>
+    </author>
+  </entry>
+  <entry>
+    <title>in伊春（小兴安岭）</title>
+    <updated>2019-07-28T16:01:00+08:00</updated>
+    <id>tag:8kg.org,2019-07-28:/post/11023.html</id>
+    <content type="html">&lt;p&gt;许久没有更新博客了，原因是最近出去玩了一圈。大家都知道我在东北，但是东北是一个地域概念，事实上东北每个地区都是有不同的风土人情的。沉了炎炎夏日，我特意去了一趟更北的北方——伊春。提起伊春，可能并不会有太多人知道，毕竟这是一个五线开外的小城市。有多小呢？伊春市的好多区人口还没有我们一个楼盘园区的人多呢。但是提起伊春的另一个名字，就会变得知名度高很多了——小兴安岭。&lt;/p&gt;&#xA;</content>
+    <link href="https://2hu.net/post/11023.html"></link>
+    <author>
+      <name>熊的猫</name>
+    </author>
+  </entry>
+</feed>

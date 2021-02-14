@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /shource/
+Sitemap: http://8kg.org/sitemap.xml

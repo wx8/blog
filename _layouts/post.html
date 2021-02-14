@@ -2,38 +2,42 @@
 layout: default
 ---
 
-<div class="post">
-  <div class="post-info">
-    <span>Written by</span>
-    {% if page.author %}
-        {{ page.author }}
-    {% else %}
-        {{ site.author.name }}
-    {% endif %}
-
-    {% if page.date %}
-      <br>
-      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    {% endif %}
-  </div>
-
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-line"></div>
-
-  {{ content }}
-</div>
-
-{% if page.comments %}
-  {% include disqus_comments.html %}
-{% endif %}
-
-<div class="pagination">
-  {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
-  {% endif %}
-
-  <a href="#" class="top">Top</a>
-</div>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/wx8/online@0.1.0/second.min.css">
+<main class="homehead">
+	<div class="post">
+		<h1 class="post-title">{{ page.title }}</h1>
+		<hr>
+		<div class="post-info">
+			{% if page.date %}
+			<time>{{ page.date | date: "熊の猫 写于 %Y年%m月%d日" }}</time><div class="textnone">anwuyu.com - 二只老虎</div>
+			{% endif %}
+		</div>
+		{{ content }}
+	</div>
+	<div class="pagination">
+		{% if page.next.url %}
+		<div class="textnone">anwuyu.com - 二只老虎</div><a href="{{ page.next.url | prepend: site.baseurl }}" class="swipes left arrow">㊤上一篇</a>
+		{% endif %}
+		{% if page.previous.url %}
+		<a href="{{ page.previous.url | prepend: site.baseurl }}" class="swipes right arrow">下一篇㊦</a><div class="textnone">anwuyu.com - 二只老虎</div>
+		{% endif %}
+	</div>
+	<div class="swiper">
+		{% if page.next.url %}
+		<a href="{{ page.next.url | prepend: site.baseurl }}" class="arrowing left" title="前一篇">〈</a>
+		{% endif %}
+		{% if page.previous.url %}
+		<a href="{{ page.previous.url | prepend: site.baseurl }}" class="arrowing right" title="后一篇">〉</a>
+		{% endif %}
+	</div>
+	<div class="pagination_title">
+		<span class="pagination_title">──────────　欢 迎 评 论　──────────</span>
+	</div>
+	<div id="tcomment"></div>
+</main>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/twikoo@1.2.0/dist/twikoo.all.min.js"></script>
+<script>twikoo.init({ envId: 'project-2gf81oyz508f00f6', el: '#tcomment' })</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@latest/src/highlightjs-line-numbers.min.js"></script>
+<script>hljs.initLineNumbersOnLoad();</script>

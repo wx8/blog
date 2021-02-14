@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<link rel="canonical" href="https://2hu.net">
+<link rel="shortcut icon" href="/old/favicon.png">
+<link rel="apple-itouch-icon" href="/old/favicon.png">
+<link rel="stylesheet" href="/old/bundle/index.css">
+<link rel="stylesheet" href="https://bucket.cdn.sh.cn/font_awesome/css/all.min.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+        <meta name="keywords" content="">
+        <meta name="description" content="小白指南：CloudFlare性能优化">
+        <meta name="author" content="熊的猫">
+        <title>小白指南：CloudFlare性能优化 - 博客哔哔·8kg.org</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+				<header class="header-wrap auto_header">
+	<div class="site-heading">
+		<div id="homelogo">
+			<a href="/">
+				<img src="/old/images/icon.svg" alt="博客哔哔" title="博客哔哔">
+			</a>
+			<h1 class="none">博客哔哔</h1>
+		</div>
+		<ul class="menu">
+			<li class="menu-item"><a href="/"><i class="fas fa-home"></i><span class="mo">主页</span></a></li>
+			<li class="menu-item"><a href="/archive"><i class="fas fa-list-ul"></i><span class="mo">目录</span></a></li>
+			<li class="menu-item"><a href="/about"><i class="fas fa-user-circle-o"></i><span class="mo">关于</span></a></li>
+			<li class="menu-item"><a href="/friend"><i class="fas fa-link"></i><span class="mo">友链</span></a></li>
+			<li class="menu-item"><a href="/feed.xml"><i class="fas fa-rss"></i><span class="mo">订阅</span></a></li>
+		</ul>
+		<div class="search-wrap">
+  <input id="search" class="search" placeholder="搜索..." data-root="">
+  <svg class="icon" width="25" height="25" viewBox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg>
+</div>
+
+	</div>
+</header>
+			</header>
+			<div class="post-title" style="background-image:url(https://bucket.cdn.sh.cn/post/6808.jpg);">
+				<div class="article-title">
+					<h1>小白指南：CloudFlare性能优化</h1>
+					<hr class="small">
+					<span class="name">『 熊的猫写于</span>
+					
+						<span class="date name" data-time="1521518220"><span class="from"></span></span>
+					
+					<span class="name">』</span>
+				</div>
+			</div>
+            <article class="main article">
+                <article class="content"><p>春困秋乏夏打盹，懒人全年都有借口。闲话不说，今天继续本着凑不要脸的职业精神，摘抄大神们的文章，还请大神们别发神威，得过且过。哈，哈哈，哈哈哈……</p>
+
+<p>今天扒的文章是<a href="https://sh.gg/">@Willin Wang</a>大神的小白指南——《CloudFlare配置SSL及性能优化》，版权自然归人家所有。</p>
+
+<p>众所周知，CloudFlare是很多人架站不可缺少的工具，这厮不仅有CDN供大家使用，还有强大的DNS解析功能、AMP移动优化、免费SSL……，但是功能多了就面临一个问题——这些功能究竟咋玩啊？虽然CloudFlare有多种国家语言版本，但是我们唯一能看得懂的估计只有英语一种吧。所以面对免费却又专业的CloudFlare，大家伙可能会一边免费体验，一边心里暗自嘀咕：这是啥？这个又是啥？这些TM都是啥啥啥啊？？？</p>
+
+<p>所以我就直接把Willin Wang的CloudFlare优化指南搬了出来，傻瓜速成，简单粗暴！</p>
+
+<h2>Crypto</h2>
+
+<h3>SSL</h3>
+
+<p><strong>默认值：<code>Flexible</code></strong>
+适用于Github、Coding.net等之类的，没有采用SSL加密的源站。
+<strong>Full / Full(Strict)</strong>
+适用于源站也有SSL证书，Strict模式校验证书。
+<strong>Automatic HTTPS Rewrites</strong>
+默认关闭，可以打开。
+自动将页面中的HTTP资源改用HTTPS方式请求。</p>
+
+<h2>Firewall</h2>
+
+<p>Cloudflare的验证码是最烦的东西了。</p>
+
+<h3>Security Level</h3>
+
+<p>默认： Medium
+可以改为 <code>Essentially Off</code> ，减少验证码弹出。</p>
+
+<h3>Challenge Passage</h3>
+
+<p>默认：半小时，可以改为一天。</p>
+
+<h2>Speed</h2>
+
+<p>可以将 javascript、css、html 自动压缩全部勾选上。</p>
+
+<h2>Page Rules</h2>
+
+<p>免费3条，只需要建一条即可将所有HTTP请求跳转到HTTPS上。
+<code>URL如：http://*.yourdomain.com/*</code>
+选择 <code>Always Use HTTPS</code> 选项，保存并发布。</p>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/images/icon.svg);"></div>
+                    <a class="name" href="/about">熊的猫</a>
+                    <div class="intro">理想是做一个有文化的暴发户</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/old/post/6854.html">物语呢喃：成熟</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/old/post/6789.html">让友链也漂漂亮亮的</a>
+                    </section>
+                    
+                </section>
+                
+<a class="name" href="https://2hu.net"><div id="comment" style="text-align:center;font-size:2rem;background:#ffcfcf;">评论已关闭，欢迎移步新博客。</div></a>
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+         © 8kg.org
+    </span>
+    <span class="publish">Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a></span>
+</footer>
+        <script src="/old/bundle/index.js"></script>
+		<script src="/old/bundle/auto_header.js?version=0.0811"></script>
+    </body>
+</html>

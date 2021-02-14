@@ -1,23 +1,19 @@
 <head>
+  <title>
+    {% if page.title %}{{ page.title | escape }} - 二只老虎
+    {% else %}二只老虎 🐯 あなたがいるから{% endif %}
+  </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  {% seo %}
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon-32x32.png" | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon-16x16.png" | relative_url }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/apple-touch-icon.png" | relative_url }}">
-
-  <!-- RSS -->
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta property="author" content="熊の猫,hi@mail.net">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//tcb-api.tencentcloudapi.com" />
+  <link rel="dns-prefetch" href="//gravatar.zeruns.tech" />
+  <link rel="dns-prefetch" href="//quiet.a.blog.hi.cn" />
+  <link rel="stylesheet" href="/main.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="//cdn.jsdelivr.net/gh/wx8/online@0.1.0/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="//cdn.jsdelivr.net/gh/wx8/online@0.1.0/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="//cdn.jsdelivr.net/gh/wx8/online@0.1.0/apple-touch-icon.png">
   {% feed_meta %}
-
-  <!-- Google Analytics-->
-  {% if site.google_analytics and jekyll.environment == 'production' %}
-  {% include analytics.html %}
-  {% endif %}
 </head>
